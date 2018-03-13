@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC     
+          "-//Hibernate/Hibernate Configuration DTD 3.0//EN"     
+          "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-mapping package="quanyec.thinkblog.pojo">
+	<class name="Blog" table="blog">
+		<id name="id" column="blog_id">
+			<generator class="identity" />
+		</id>
+		<property name="title" type="string" not-null="true" />
+		<property name="author" type="string" not-null="true" />
+		<property name="date" type="java.util.Date" not-null="true" />
+		<!-- MySQL的longtext支持 -->
+		<property name="content" type="text">
+			<column name="content" length="16777216" />
+		</property>
+	</class>
+</hibernate-mapping>

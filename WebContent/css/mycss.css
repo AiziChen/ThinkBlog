@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+body {
+	background: #fcfed0;
+}
+
+.alink {
+	text-decoration: none;
+	background-color: #ddd;
+	border: 1px dotted red;
+	background-color: #ddd;
+}
+
+.alinkRight {
+	text-decoration: none;
+	float: right;
+	background-color: #ddd;
+	border: 1px dotted red;
+	background-color: #ddd;
+}

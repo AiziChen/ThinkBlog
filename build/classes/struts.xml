@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+
+	<package name="thinkBlog" extends="struts-default">
+
+		<!-- 加载主页 -->
+		<action name="index" class="quanyec.thinkblog.action.main.LoadIndexAction">
+			<result>/WEB-INF/content/index.jsp</result>
+		</action>
+		<!-- 显示主页内容 -->
+		<action name="showcontent" class="quanyec.thinkblog.action.main.LoadIndexAction"
+			method="loadContent">
+			<result>/WEB-INF/content/blogContent.jsp</result>
+		</action>
+
+		<!-- 登录处理 -->
+		<action name="login" class="quanyec.thinkblog.action.main.LoginAction">
+			<result name="success">/WEB-INF/content/loginSuccess.jsp</result>
+			<result name="input">/WEB-INF/content/loginForm.jsp</result>
+		</action>
+
+		<!-- 删除博客 -->
+		<action name="deleteBlog" class="quanyec.thinkblog.action.dao.DeleteBlogAction">
+			<result>/WEB-INF/content/deleteSuccess.jsp</result>
+		</action>
+
+
+		<!-- 新建博客 -->
+		<action name="newBlog" class="quanyec.thinkblog.action.dao.NewBlogAction">
+			<result>/WEB-INF/content/newBlogEditArea.jsp</result>
+			<result name="none">/WEB-INF/content/noPurview.jsp</result>
+		</action>
+		<!-- 提交新建的博客 -->
+		<action name="commitBlog" class="quanyec.thinkblog.action.dao.NewBlogAction"
+			method="commitBlog">
+			<result>/WEB-INF/content/publishSuccess.jsp</result>
+			<result name="none">/WEB-INF/content/noPurview.jsp</result>
+		</action>
+
+		<!-- 修改博客 -->
+		<action name="modifyBlog" class="quanyec.thinkblog.action.dao.ModifyBlogAction">
+			<result>/WEB-INF/content/modifyBlogEditArea.jsp</result>
+			<result name="none">/WEB-INF/content/noPurview.jsp</result>
+		</action>
+		<action name="commitModifyBlog" class="quanyec.thinkblog.action.dao.ModifyBlogAction"
+			method="modifyCommit">
+			<result>/WEB-INF/content/publishSuccess.jsp</result>
+			<result name="none">/WEB-INF/content/noPurview.jsp</result>
+		</action>
+
+		<!-- 全局配置：访问jsp的ActionSupport的action -->
+		<action name="*">
+			<result>/WEB-INF/content/{1}.jsp</result>
+		</action>
+
+	</package>
+
+</struts>

@@ -20,3 +20,8 @@
 
 ## 三、服务器运行
 与本地运行一致，Tomcat端口设为80即可。
+
+## 截图
+![blog_list](https://github.com/AiziChen/ThinkBlog/blob/master/screenshoot/blog_list.png)
+![new_blog](https://github.com/AiziChen/ThinkBlog/blob/master/screenshoot/new_blog.png)
+![blog_view](https://github.com/AiziChen/ThinkBlog/blob/master/screenshoot/blog_view.png)

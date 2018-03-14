@@ -24,4 +24,4 @@
 ## 截图
 ![blog_list](https://github.com/AiziChen/ThinkBlog/blob/master/screenshoot/blog_list.png)
 ![new_blog](https://github.com/AiziChen/ThinkBlog/blob/master/screenshoot/new_blog.png)
-![blog_view](https://github.com/AiziChen/ThinkBlog/blob/master/screenshoot/blog_view.png)
+![view_blog](https://github.com/AiziChen/ThinkBlog/blob/master/screenshoot/view_blog.png)

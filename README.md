@@ -1,5 +1,6 @@
 # ThinkBlog
-一个使用Struts2、Hibernate以及Spring开发的开源个人博客
+一个使用Struts2、Hibernate、Spring技术，以及tinyMCE编辑器开发的开源个人博客，
+使用HTML5作为保存内容，因此支持全部HTML5的标签，并且支持prism多种源代码高亮显示。
 
 ## 一、使用Eclipse for JavaEE进行开发：
 本系统使用Elcipse for JavaEE开发，其它IDE下可通过某些方式可进行编辑开发。 

@@ -1,8 +1,7 @@
 # ThinkBlog
 一个使用Struts2、Hibernate以及Spring开发的开源个人博客
 
-
-## 一、使用Eclipse for JavaEE进行开发： 
+## 一、使用Eclipse for JavaEE进行开发：
 本系统使用Elcipse for JavaEE开发，其它IDE下可通过某些方式可进行编辑开发。 
 1. 下载并安装Eclipse for JavaEE；
 2. 使用git工具将本库clone到一个目录中（比如桌面）；

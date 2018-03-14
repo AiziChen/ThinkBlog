@@ -21,7 +21,7 @@ public class DeleteBlogAction extends ActionSupport {
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
-	 *  将要删除的博客的id
+	 * 将要删除的博客的id
 	 */
 	private int id;
 

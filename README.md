@@ -13,7 +13,7 @@
 7. 启动Tomcat，启动完成后打开浏览器输入：http://localhost:8080/ThinkBlog/ 观看效果。
 
 ## 二、本地直接运行 
-1. 下载并安装Tomcat和JDK8；
+1. 下载并安装Tomcat和JDK8/JRE8；
 2. 将本reposi下载或git clone到Tomcat中的webapps目录下；
 3. 下载并安装MySQL，端口为3306，用户名和密码为DavidChen和quanyec；并且在该数据库中创建一个thinBlog数据库来保存博客中的数据。
 4. 启动Tomcat，启动完成后打开浏览器输入：http://localhost:8080/ThinkBlog/ 观看效果。

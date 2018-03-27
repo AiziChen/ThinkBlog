@@ -9,12 +9,9 @@ body {
 	background-color: #ddd;
 	border: 1px dotted red;
 	background-color: #ddd;
+	padding: 5px;
 }
 
-.alinkRight {
-	text-decoration: none;
-	float: right;
-	background-color: #ddd;
-	border: 1px dotted red;
-	background-color: #ddd;
+.alink:hover {
+	background-color: #eee;
 }

@@ -35,6 +35,7 @@ public class NewBlogAction extends ActionSupport {
 		return SUCCESS;
 	}
 
+	// 提交博客到数据库
 	public String commitBlog() throws Exception {
 		if (Utils.getSessionHashCode() == null) {
 			return NONE;
@@ -54,6 +55,16 @@ public class NewBlogAction extends ActionSupport {
 		session.close();
 
 		return SUCCESS;
+	}
+
+	@Override
+	public void validate() {
+		super.validate();
+		if (title != null && author != null) {
+			if (title.isEmpty() || author.isEmpty()) {
+				addFieldError("msg", "标题或作者不能为空");
+			}
+		}
 	}
 
 	public String getTitle() {

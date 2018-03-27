@@ -7,13 +7,22 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="css/mycss.css" type="text/css" />
 <title>管理员登录</title>
+<style type="text/css">
+	div {
+		margin: auto;
+		width: 300px;
+		text-align: center;
+	}
+</style>
 </head>
 <body>
+<div>
 	<s:fielderror name="msg" />
 	<s:form action="login">
 		<s:textfield name="username" label="用户名" />
 		<s:textfield name="password" type="password" label="密码" />
 		<s:submit value="登录" />
 	</s:form>
+</div>
 </body>
 </html>

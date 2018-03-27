@@ -13,17 +13,26 @@
 	margin-left: 10%;
 	margin-right: 10%;
 	border-radius: 4px;
+	list-style-type: none;
 }
+
+.li-style {
+	padding-bottom: 2px;
+	border-radius: 2px;
 }
+.li-style:hover {
+	background-color: #eee;
+}
+
 </style>
 </head>
 <body>
 	<!-- 登录或者发布新博客 -->
 	<s:if test="#session.passwordHashCode != null">
-		<a href="newBlog.action" class="alinkRight">新博客</a>
+		<a href="newBlog.action" class="alink" style="float: right;">新博客</a>
 	</s:if>
 	<s:else>
-		<a href="loginForm.action" class="alinkRight">登录</a>
+		<a href="loginForm.action" class="alink" style="float: right;">登录</a>
 	</s:else>
 
 	<h3 align="center">我的博客</h3>
@@ -34,7 +43,7 @@
 			<s:a action="showcontent.action" style="text-decoration: none;">
 				<!-- 使用s:param标签向此action传参 -->
 				<s:param name="id" value="#st.index" />
-				<li style="margin-bottom: 2px;"><s:property value="#blog.title" /></li>
+				<li class="li-style"><s:property value="#blog.title" /></li>
 			</s:a>
 		</s:iterator>
 	</ol>

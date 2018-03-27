@@ -19,12 +19,12 @@
 
 <body>
 	<s:if test="#session.passwordHashCode != null">
-		<s:a class="alinkRight" action="deleteBlog.action">
+		<s:a class="alink" style="float: right;" action="deleteBlog.action">
 			<s:param name="id" value="#currentBlog.id" />删除博客</s:a>
-		<s:a class="alinkRight" action="modifyBlog.action">
+		<s:a class="alink" style="float: right;" action="modifyBlog.action">
 			<s:param name="id" value="#currentBlog.id"></s:param>
-		修改博客
-	</s:a>
+			修改博客
+		</s:a>
 	</s:if>
 
 	<h3 align="center">

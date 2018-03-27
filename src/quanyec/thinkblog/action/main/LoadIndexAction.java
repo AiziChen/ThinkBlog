@@ -38,9 +38,6 @@ public class LoadIndexAction extends ActionSupport {
 		tx.commit();
 		session.close();
 
-		if (allBlogs != null && allBlogs.size() > 0) {
-			ActionContext.getContext().put("allBlogs", allBlogs);
-		}
 		return SUCCESS;
 	}
 
@@ -60,6 +57,10 @@ public class LoadIndexAction extends ActionSupport {
 		tx.commit();
 		session.close();
 
+		if (id >= allBlogs.size()) {
+			return ERROR;
+		}
+		
 		ActionContext.getContext().put("currentBlog", allBlogs.get(id));
 		return SUCCESS;
 	}

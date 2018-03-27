@@ -8,6 +8,7 @@
 <title>新建博客</title>
 <script language="javascript" type="text/javascript"
 	src="./tinymce/tinymce.min.js"></script>
+<link type="text/css" rel="stylesheet" href="css/mycss.css" />
 
 <script language="javascript" type="text/javascript">
 	tinymce
@@ -79,11 +80,13 @@
 
 </head>
 <body>
+	<s:a action="index.action" class="alink" style="float: right;">返回首页</s:a>
 	<div align="center">
+		<s:fielderror name="msg"></s:fielderror>
 		<s:form id="content" action="commitBlog.action" method="post">
 			<s:textarea id="editor" name="content"></s:textarea>
-			<s:textfield name="author" label="作者" />
-			<s:textfield name="title" label="标题" />
+			<s:textfield name="author" label="作者" key="author" />
+			<s:textfield name="title" label="标题" key="title" />
 			<s:submit value="发布" />
 		</s:form>
 	</div>

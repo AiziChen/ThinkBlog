@@ -12,6 +12,7 @@
 		<action name="showcontent" class="quanyec.thinkblog.action.main.LoadIndexAction"
 			method="loadContent">
 			<result>/WEB-INF/content/blogContent.jsp</result>
+			<result name="error">/WEB-INF/content/error.jsp</result>
 		</action>
 
 		<!-- 登录处理 -->
@@ -36,17 +37,20 @@
 			method="commitBlog">
 			<result>/WEB-INF/content/publishSuccess.jsp</result>
 			<result name="none">/WEB-INF/content/noPurview.jsp</result>
+			<result name="input">/WEB-INF/content/newBlogEditArea.jsp</result>
 		</action>
 
 		<!-- 修改博客 -->
 		<action name="modifyBlog" class="quanyec.thinkblog.action.dao.ModifyBlogAction">
 			<result>/WEB-INF/content/modifyBlogEditArea.jsp</result>
 			<result name="none">/WEB-INF/content/noPurview.jsp</result>
+			<result name="error">/WEB-INF/content/error.jsp</result>
 		</action>
 		<action name="commitModifyBlog" class="quanyec.thinkblog.action.dao.ModifyBlogAction"
 			method="modifyCommit">
 			<result>/WEB-INF/content/publishSuccess.jsp</result>
 			<result name="none">/WEB-INF/content/noPurview.jsp</result>
+			<result name="input">/WEB-INF/content/modifyBlogEditArea.jsp</result>
 		</action>
 
 		<!-- 全局配置：访问jsp的ActionSupport的action -->

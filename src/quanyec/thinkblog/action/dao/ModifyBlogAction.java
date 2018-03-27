@@ -39,6 +39,9 @@ public class ModifyBlogAction extends ActionSupport {
 		Transaction tx = session.beginTransaction();
 
 		Blog blog = session.get(Blog.class, id);
+		if (blog == null) {
+			return ERROR;
+		}
 		author = blog.getAuthor();
 		title = blog.getTitle();
 		content = blog.getContent();
@@ -49,6 +52,12 @@ public class ModifyBlogAction extends ActionSupport {
 		return SUCCESS;
 	}
 
+	/**
+	 * 修改博客
+	 * 
+	 * @return
+	 * @throws Exception
+	 */
 	public String modifyCommit() throws Exception {
 		if (Utils.getSessionHashCode() == null) {
 			return NONE;
@@ -66,6 +75,16 @@ public class ModifyBlogAction extends ActionSupport {
 		tx.commit();
 		session.close();
 		return SUCCESS;
+	}
+
+	@Override
+	public void validate() {
+		super.validate();
+		if (title != null && author != null) {
+			if (title.isEmpty() || author.isEmpty()) {
+				addFieldError("msg", "标题或作者不能为空");
+			}
+		}
 	}
 
 	public String getTitle() {
